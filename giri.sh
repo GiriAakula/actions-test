@@ -1,1 +1,1 @@
-ping "google.com"
+hping3 -c 1 -V -p 80 -s 5050 -A example.fqdn

@@ -1,1 +1,1 @@
-hping3 -c 1 -V -p 80 -s 5050 -A google.com
+telnet https://kong-ola-apigateway-oem-8001a.evkcs.corp.olaelectric.com 443

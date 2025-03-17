@@ -27,6 +27,6 @@ jobs:
       - name: Run tests
         run: |
           SCRIPT_NAME=${{ env.file_name }}
-          chmod +x "./$SCRIPT_NAME.sh"
-          ./$SCRIPT_NAME.sh
+          chmod +x "./release-scripts/$SCRIPT_NAME.sh"
+          ./release-scripts/$SCRIPT_NAME.sh
           echo "$SCRIPT_NAME"

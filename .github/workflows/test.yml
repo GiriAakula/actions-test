@@ -11,6 +11,7 @@ jobs:
 
     env:
       file_name: "giri"
+      JIRA_TICKET_NUMBER: "000"
 
     steps:
       - name: Checkout repository
@@ -28,5 +29,6 @@ jobs:
         run: |
           SCRIPT_NAME=${{ env.file_name }}
           chmod +x "./release-scripts/$SCRIPT_NAME.sh"
-          ./release-scripts/$SCRIPT_NAME.sh
+          ./release-scripts/$SCRIPT_NAME.sh > script_output_${{ env.JIRA_TICKET_NUMBER }}.txt
+          cat script_output_${{ env.JIRA_TICKET_NUMBER }}.txt
           echo "$SCRIPT_NAME"

@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      file_name: "giri"
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -23,6 +26,7 @@ jobs:
 
       - name: Run tests
         run: |
-          chmod +x "./giri.sh"
-          ./giri.sh
-          echo "Giri"
+          SCRIPT_NAME=${{ env.file_name }}
+          chmod +x "./$SCRIPT_NAME.sh"
+          ./$SCRIPT_NAME.sh
+          echo "$SCRIPT_NAME"

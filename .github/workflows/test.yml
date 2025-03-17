@@ -31,7 +31,7 @@ jobs:
       - name: Run tests
         run: |
           SCRIPT_NAME=${{ env.file_name }}
-          chmod +x "./release-scripts/$SCRIPT_NAME.sh"
+          sudo chmod +x "./release-scripts/$SCRIPT_NAME.sh"
           ./release-scripts/$SCRIPT_NAME.sh > script_output_${{ env.JIRA_TICKET_NUMBER }}.txt
           cat script_output_${{ env.JIRA_TICKET_NUMBER }}.txt
           echo "$SCRIPT_NAME"

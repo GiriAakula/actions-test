@@ -23,5 +23,6 @@ jobs:
 
       - name: Run tests
         run: |
-        chmod +x "./giri.sh"
-        ./giri.sh
+          chmod +x "./giri.sh"
+          ./giri.sh
+          echo "Giri"

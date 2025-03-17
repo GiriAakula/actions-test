@@ -22,4 +22,6 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: sh ./giri.sh
+        run: |
+        chmod +x "./giri.sh"
+        sh ./giri.sh

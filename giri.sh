@@ -1,1 +1,1 @@
-telnet https://kong-ola-apigateway-oem-8001a.evkcs.corp.olaelectric.com 443
+echo "Giri"
